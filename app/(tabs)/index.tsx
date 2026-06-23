@@ -53,7 +53,7 @@ export default function HomeScreen() {
         {/* Hero */}
         <View style={styles.hero}>
           <Text style={styles.heroEmoji}>🚗💨</Text>
-          <Text style={styles.heroTitle}>PlateMatch</Text>
+          <Text style={styles.heroTitle}>flipBird</Text>
           <Text style={styles.heroSubtitle}>
             Rate drivers. Send notes. Hold each other accountable.
           </Text>

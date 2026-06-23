@@ -1,4 +1,4 @@
--- PlateMatch Database Schema
+-- flipBird Database Schema
 -- Run this in your Supabase SQL editor
 
 -- Profiles (extends Supabase auth.users)

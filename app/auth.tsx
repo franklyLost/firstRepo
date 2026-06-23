@@ -59,7 +59,7 @@ export default function AuthScreen() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
-        <Text style={styles.title}>{mode === 'signin' ? 'Welcome back' : 'Join PlateMatch'}</Text>
+        <Text style={styles.title}>{mode === 'signin' ? 'Welcome back' : 'Join flipBird'}</Text>
         <Text style={styles.subtitle}>
           {mode === 'signin'
             ? 'Sign in to claim plates and manage your reviews.'

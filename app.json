@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "PlateMatch",
-    "slug": "platematch",
+    "name": "flipBird",
+    "slug": "flipbird",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "platematch",
+    "scheme": "flipbird",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
@@ -14,10 +14,10 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.platematch.app",
+      "bundleIdentifier": "com.flipbird.app",
       "infoPlist": {
-        "NSCameraUsageDescription": "PlateMatch needs camera access to photograph license plates.",
-        "NSPhotoLibraryUsageDescription": "PlateMatch needs photo library access to upload plate images."
+        "NSCameraUsageDescription": "flipBird needs camera access to photograph license plates.",
+        "NSPhotoLibraryUsageDescription": "flipBird needs photo library access to upload plate images."
       }
     },
     "android": {
@@ -29,7 +29,7 @@
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE"
       ],
-      "package": "com.platematch.app"
+      "package": "com.flipbird.app"
     },
     "web": {
       "bundler": "metro",
@@ -41,7 +41,7 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "PlateMatch needs camera access to photograph license plates."
+          "cameraPermission": "flipBird needs camera access to photograph license plates."
         }
       ]
     ],
