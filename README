@@ -1,0 +1,61 @@
+PlateMatch — License Plate Social Review App
+
+A mobile app (React Native / Expo) where you can scan a license plate, rate
+the driver 0-5 stars, tag them with emoji labels, and leave notes (like
+"broken tail light"). Plate owners can claim their plate to see their
+reputation.
+
+QUICK START
+-----------
+
+1. Install dependencies
+   npm install
+
+2. Copy environment file and fill in credentials
+   cp .env.example .env
+
+3. Set up Supabase
+   - Create a free project at https://supabase.com
+   - Run supabase/schema.sql in the Supabase SQL editor
+   - Copy the project URL and anon key into .env
+
+4. (Optional) Set up PlateRecognizer
+   - Get a free API key at https://platerecognizer.com (500 lookups/month free)
+   - Add it to .env
+   - Without a key, the app runs in demo mode with a mock plate
+
+5. Start the app
+   npm start
+   Press 'i' for iOS simulator, 'a' for Android emulator, or scan the QR
+   code with Expo Go on your phone.
+
+ARCHITECTURE
+------------
+
+  app/                  Expo Router screens (file-based routing)
+  app/(tabs)/           Tab bar screens (Home, My Plates)
+  app/auth.tsx          Sign in / sign up modal
+  app/camera.tsx        Plate scanning screen
+  app/plate/[id].tsx    Plate detail + reviews
+  app/rate/[id].tsx     Rate a driver (modal)
+  app/claim/[id].tsx    Claim a plate (modal)
+  components/           Shared UI components
+  lib/                  Supabase client, plate API, data access
+  types/                TypeScript types and tag definitions
+  supabase/schema.sql   Database schema (run once in Supabase SQL editor)
+
+KEY DECISIONS
+-------------
+
+Plate OCR: PlateRecognizer API (platerecognizer.com) — specialized license
+plate OCR with US state detection. Falls back to demo mode without a key.
+
+Ownership Verification: Claims marked pending (unverified). Two people
+claiming the same plate triggers "conflicted" status for manual review.
+Future: request registration document photo to raise the bar.
+
+Anonymous Reviews: Username hidden on public page, but account link kept
+internally for moderation.
+
+Privacy Roadmap: rate-limiting per reviewer per plate, report/flag system,
+minimum account age, geofencing to reduce stalking surface.
